@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:twoplayers="clr-namespace:TwoPlayers"
+             x:Class="TwoPlayers.CombinedPlayer"
+             Title="CombinedPlayer">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Label 
+            x:Name="WelcomeLabel"
+            Text="Welcome to Combined Player!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" Grid.Row="0" />
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+
+            <twoplayers:YoutubePlayer BackgroundColor="Aqua" Grid.Row="1" Grid.Column="0" ></twoplayers:YoutubePlayer>
+            <twoplayers:YoutubePlayer BackgroundColor="DimGray" Grid.Row="1" Grid.Column="1"></twoplayers:YoutubePlayer>
+
+        </Grid>
+    </Grid>
+    
+
+</ContentPage>
